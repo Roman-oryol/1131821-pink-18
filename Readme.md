@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Роман Орел](https://up.htmlacademy.ru/adaptive/18/user/1131821).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Ефимов](https://up.htmlacademy.ru/adaptive/18/user/367335).
 
 ---
 
