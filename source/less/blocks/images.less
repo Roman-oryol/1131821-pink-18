@@ -8,10 +8,7 @@
 }
 
 .images__list {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
+  .list-reset();
 }
 
 .images__item {
@@ -20,12 +17,18 @@
   margin-bottom: 20px;
 }
 
+.images__to-full--top {
+  display: block;
+  width: 320px;
+  margin-left: -20px;
+}
+
 .images__top {
   position: absolute;
   top: 0;
   right: 20px;
 
-  display: inline-block;
+  display: block;
   padding: 5px 20px 7px;
 
   font-weight: 700;
@@ -40,7 +43,7 @@
   display: block;
 }
 
-.images__description-wrap {
+.images__description {
   padding: 0 10px 20px 17px;
   background-color: #f2f2f2;
 }
