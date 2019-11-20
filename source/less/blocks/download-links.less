@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: flex-end;
 
-  .list-reset;
+  .list-reset();
   margin-bottom: 22px;
   padding-right: 37px;
   padding-left: 37px;
@@ -11,26 +11,27 @@
 
 .application-download__item {
   display: block;
+  background-repeat: no-repeat;
 
   &--apple {
     width: 47px;
     height: 56px;
 
-    background: url("../img/logo-apple.svg") no-repeat 0 0;
+    background-image: url("../img/logo-apple.svg");
   }
 
   &--android {
     width: 43px;
     height: 47px;
 
-    background: url("../img/logo-android.svg") no-repeat 0 0;
+    background-image: url("../img/logo-android.svg");
   }
 
   &--microsoft {
     width: 44px;
     height: 41px;
 
-    background: url("../img/logo-microsoft.svg") no-repeat 0 0;
+    background-image: url("../img/logo-microsoft.svg");
   }
 }
 
