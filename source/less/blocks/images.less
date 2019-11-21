@@ -1,6 +1,5 @@
 .images__intro {
-  width: 250px;
-  margin: 0 auto 49px;
+  margin: 0 0 49px;
   padding: 45px 35px 0;
 
   line-height: 30px;
@@ -15,6 +14,8 @@
   position: relative;
 
   margin-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .images__to-full--top {
@@ -44,13 +45,12 @@
 }
 
 .images__description {
-  padding: 0 10px 20px 17px;
+  padding: 18px 10px 20px 17px;
   background-color: #f2f2f2;
 }
 
 .images__author {
   margin: 0;
-  padding-top: 18px;
 }
 
 .images__author-name {
@@ -71,9 +71,22 @@
 .images__like-link {
   position: relative;
 
-  padding-left: 33px;
+  padding-left: 32px;
 
   font-size: 12px;
   color: #d22856;
   text-transform: uppercase;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 3px;
+    left: 1px;
+
+    width: 13px;
+    height: 12px;
+
+    background: url("../img/icon-heart.svg") no-repeat;
+  }
 }
