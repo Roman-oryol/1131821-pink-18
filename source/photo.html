@@ -9,20 +9,22 @@
 
     <header class="page-header">
       <nav class="page-header__nav main-nav">
-        <a class="main-nav__logo" href="index.html">
-          <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта Пинк">
-        </a>
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть меню</span></button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item"><a href="index.html">Главная</a></li>
-          <li class="main-nav__item"><a>Фотографии</a></li>
-          <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
-          <li class="main-nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
-        </ul>
+        <div class="main-nav__inner">
+          <a class="main-nav__logo" href="index.html">
+            <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта Пинк">
+          </a>
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть меню</span></button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="index.html">Главная</a></li>
+            <li class="main-nav__item"><a>Фотографии</a></li>
+            <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
+            <li class="main-nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+          </ul>
+        </div>
       </nav>
       <div class="container">
-        <h1 class="page-header__title">Фотографии пользователей</h1>
+        <h1 class="page-header__title">Фотографии <br>пользователей</h1>
       </div>
     </header>
 
@@ -31,20 +33,18 @@
         <h2 class="visually-hidden">Превью фотографий пользователей</h2>
         <p class="images__intro">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
         <ul class="images__list">
-          <li class="images__item">
+          <li class="images__item images__item--top">
             <b class="images__top">Панорама дня</b>
             <a class="images__to-full images__to-full--top" href="#nowhere">
               <img class="images__img" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Панорама с высоты">
             </a>
-            <div class="images__description-wrap">
-              <div class="images__description">
-                <p class="images__author">
-                  <cite class="images__author-name">Анна</cite>
-                  <time class="images__time" datetime="2019-11-07 17:55">(5 минут назад)</time>
-                </p>
-                <p class="images__caption">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-                <a class="images__like-link" href="#nowhere">Нравится: 215</a>
-              </div>
+            <div class="images__description images__description--top">
+              <p class="images__author">
+                <cite class="images__author-name">Анна</cite>
+                <time class="images__time" datetime="2019-11-07 17:55">(5 минут назад)</time>
+              </p>
+              <p class="images__caption">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+              <a class="images__like-link images__like-link--top" href="#nowhere">Нравится: 215</a>
             </div>
           </li>
           <li class="images__item">
