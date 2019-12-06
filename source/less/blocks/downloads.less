@@ -1,43 +1,64 @@
-.downloads__inner {
-  margin-left: -20px;
-  padding: 0 0 30px 20px;
-  background-image: url("../img/iphone-hand-mobile@1x.png");
+.downloads {
+  background-image:
+    url("../img/iphone-hand-mobile@1x.png"),
+    url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 0 89px;
+  background-position: 0 175px, 50% 0;
 
-  @media (min-width: 660px) {
-    margin-left: 0;
-    padding: 19px 320px 111px 0;
-
-    background-image: url("../img/iphone-hand-tablet@1x.png");
-    background-position: 50% 4px;
+  @media (min-width: 321px) {
+    background-image:
+      url("../img/iphone-hand-mobile@1x.png"),
+      url("../img/bg-back-tablet@1x.jpg");
+    background-position: 0 175px, 50% 0;
+    background-size: auto auto, auto 461px;
   }
 
-  @media (min-width: 960px) {
-    padding: 46px 640px 122px 0;
+  @media @tablet {
+    background-image:
+      url("../img/iphone-hand-tablet@1x.png"),
+      url("../img/bg-back-tablet@1x.jpg");
+    background-position: right -20px top 182px, 50% -2px;
+    background-size: auto;
+  }
 
-    background-image: url("../img/iphone-hand-desktop@1x.png");
-    background-position: 16px 36px;
+  @media @desktop {
+    background-image:
+      url("../img/iphone-hand-desktop@1x.png"),
+      url("../img/bg-back-desktop@1x.jpg");
+    background-position: right -116px top 208px, 50% 0;
+  }
+}
+
+.downloads__inner {
+  padding: 87px 0 30px 0;
+
+  @media @tablet {
+    padding: 197px 320px 111px 0;
+  }
+
+  @media @desktop {
+    box-sizing: border-box;
+    padding: 218px 640px 122px 0;
   }
 }
 
 .downloads__title {
   min-height: 60px;
-  margin: 0 0 343px;
+  margin: 0 0 342px;
 
   font-weight: 300;
   font-size: 24px;
   line-height: 30px;
   text-align: center;
 
-  @media (min-width: 660px) {
+  @media @tablet {
     margin-bottom: 29px;
     padding: 0 55px;
     font-size: 40px;
     line-height: 50px;
   }
 
-  @media (min-width: 960px) {
+  @media @desktop {
     margin-bottom: 51px;
     padding: 0;
 
@@ -59,15 +80,28 @@
   border: 3px solid #ffffff;
   border-radius: 40px;
 
-  @media (min-width: 660px) {
+  @media @tablet {
     margin-bottom: 44px;
   }
 
-  @media (min-width: 960px) {
+  @media @desktop {
     margin-bottom: 66px;
 
     font-size: 21px;
     line-height: 18px;
+  }
+
+  &:hover {
+    color: #d22856;
+
+    background-color: #ffffff;
+    box-shadow: 0 5px 7px 0 rgba(1, 1, 1, 0.75);
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+
+    box-shadow: none;
   }
 }
 
@@ -77,7 +111,7 @@
   font-weight: 300;
   text-align: center;
 
-  @media (min-width: 660px) {
+  @media @tablet {
     font-size: 18px;
   }
 }

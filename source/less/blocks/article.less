@@ -1,12 +1,12 @@
 .article {
   display: none;
 
-  @media (min-width: 660px) {
+  @media @tablet {
     display: block;
     margin-bottom: 40px;
   }
 
-  @media (min-width: 960px) {
+  @media @desktop {
     background-color: #f2f2f2;
   }
 }
@@ -14,41 +14,43 @@
 .article__inner-wrap {
   position: relative;
 
-  @media (min-width: 660px) {
+  @media @tablet {
     padding: 38px 0 31px 310px;
-
-    &::before {
-      content: "24";
-
-      position: absolute;
-      left: 0;
-      top: 0;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 238px;
-      height: 276px;
-      padding-top: 12px;
-
-      font-weight: 700;
-      font-size: 96px;
-      line-height: 149.5px;
-      color: #d22856;
-
-      background-image:
-        url("../img/icon-editor-diagram-fill.svg"),
-        url("../img/icon-timer.svg");
-      background-repeat: no-repeat, no-repeat;
-      background-position: 19px 55px, 0 0;
-      background-size: 202px 202px, 238px 276px;
-    }
   }
 
-  @media (min-width: 960px) {
+  @media @desktop {
     padding: 0;
+  }
 
-    &::before {
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 238px;
+    height: 276px;
+    padding-top: 12px;
+
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 149.5px;
+    color: #d22856;
+
+    background-image:
+      url("../img/icon-editor-diagram-fill.svg"),
+      url("../img/icon-timer.svg");
+    background-repeat: no-repeat;
+    background-position: 19px 55px, 0 0;
+    background-size: 202px 202px, 238px 276px;
+
+    @media @tablet {
+      content: "24";
+    }
+
+    @media @desktop {
       top: 33px;
 
       width: 298px;
@@ -65,7 +67,7 @@
 }
 
 .article__inner {
-  @media (min-width: 960px) {
+  @media @desktop {
     padding: 127px 0 118px 365px;
   }
 }
@@ -78,7 +80,7 @@
   line-height: 36px;
   color: #000000;
 
-  @media (min-width: 960px) {
+  @media @desktop {
     margin-bottom: 25px;
 
     line-height: 30px;
@@ -92,7 +94,7 @@
 .article__text {
   margin: 0 5px 10px 0;
 
-  @media (min-width: 960px) {
+  @media @desktop {
     margin-bottom: 30px;
 
     font-size: 18px;
@@ -109,7 +111,7 @@
   color: #d22856;
   text-decoration: underline;
 
-  @media (min-width: 960px) {
+  @media @desktop {
     font-size: 18px;
     line-height: 30px;
   }

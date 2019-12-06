@@ -1,21 +1,72 @@
 .main-nav {
   position: relative;
 
-  margin-bottom: 21px;
+  margin-bottom: -66px;
 
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
 
-  background-color: #283645;
+  background-color: rgba(0, 0, 0, 0.3);
 
-  @media (min-width: 660px) {
-    margin-bottom: 70px;
+  @media @mobile-tablet {
+    &--opened {
+      background-color: #283645;
+
+      .main-nav__list {
+        display: block;
+      }
+
+      .main-nav__logo {
+        margin-bottom: 1px;
+        padding: 22px 20px 25px;
+        box-shadow: 0 1px 0 0 #000000;
+
+        @media @tablet {
+          height: 41px;
+          padding: 26px 20px 42px;
+        }
+      }
+
+      .main-nav__toggle {
+        width: 24px;
+        height: 23px;
+
+        &::before,
+        &::after {
+          top: 10px;
+          left: -3px;
+
+          width: 30px;
+          height: 4px;
+
+          box-shadow: none;
+        }
+
+        &::before {
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
+
+        &:hover,
+        &:active {
+          &::before,
+          &::after {
+            box-shadow: none;
+          }
+        }
+      }
+    }
   }
 
-  @media (min-width: 960px) {
-    margin-bottom: 63px;
+  @media @tablet {
+    margin-bottom: -109px;
+  }
 
+  @media @desktop {
     font-weight: 400;
     line-height: 18px;
 
@@ -24,36 +75,33 @@
 }
 
 .main-nav__inner {
-  @media (min-width: 960px) {
+  @media @desktop {
     display: flex;
 
     width: 940px;
     margin-right: auto;
     margin-left: auto;
-    padding: 27px 10px 40px;
+    padding: 27px 10px 33px;
   }
 }
 
 .main-nav__logo {
   display: block;
   height: 22px;
-  margin-bottom: 1px;
-  padding: 22px 20px 25px;
-  box-shadow: 0 1px 0 0 #000000;
+  padding: 22px 20px 22px;
+  box-shadow: none;
 
-  @media (min-width: 660px) {
-    height: 40px;
+  @media @tablet {
+    height: 41px;
     padding: 27px 20px 42px;
   }
 
-  @media (min-width: 960px) {
+  @media @desktop {
     width: 147px;
     height: 40px;
     margin-right: 171px;
     margin-bottom: 0;
     padding: 0;
-
-    box-shadow: none;
   }
 }
 
@@ -63,7 +111,11 @@
 
   list-style: none;
 
-  @media (min-width: 960px) {
+  @media @mobile-tablet {
+    display: none;
+  }
+
+  @media @desktop {
     display: flex;
     flex-wrap: wrap;
   }
@@ -76,28 +128,53 @@
     0 1px 0 0 #000000,
     inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
 
-  @media (min-width: 960px) {
+  @media @desktop {
     margin-right: 80px;
     margin-bottom: 0;
 
     box-shadow: none;
+  }
 
-    &:last-child {
+  &:last-child {
+    @media @desktop {
       margin-right: 0;
+    }
+  }
+
+  &:hover {
+    a[href] {
+      color: #d22856;
+    }
+  }
+
+  &:active {
+    a[href] {
+      opacity: 0.3;
+
+      @media @desktop {
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+
+  &--active {
+    a {
+      @media @desktop {
+        border-bottom: solid 2px #ffffff;
+      }
     }
   }
 }
 
-.main-nav__list a {
+.main-nav__item a {
   display: block;
   padding: 15.5px 0;
 
   text-align: center;
   text-transform: uppercase;
 
-  @media (min-width: 960px) {
-
-    padding: 18px 0 7px;
+  @media @desktop {
+    padding: 18px 0 12px;
 
     text-transform: none;
   }
@@ -108,19 +185,56 @@
   top: 21px;
   right: 19px;
 
-  width: 24px;
-  height: 23px;
+  width: 50px;
+  height: 24px;
 
-  background: url("../img/icon-menu-cross.svg") no-repeat;
+  background-color: transparent;
   border: none;
-
   cursor: pointer;
 
-  @media (min-width: 660px) {
+  @media @tablet {
     top: 44px;
   }
 
-  @media (min-width: 960px) {
+  @media @desktop {
     display: none;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    background-color: #ffffff;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+
+    width: 50px;
+    height: 4px;
+
+    box-shadow:
+      0 10px 0 0 #ffffff,
+      0 20px 0 0 #ffffff;
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      background-color: #d22856;
+      box-shadow:
+        0 10px 0 0 #d22856,
+        0 20px 0 0 #d22856;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      opacity: 0.3;
+    }
   }
 }
