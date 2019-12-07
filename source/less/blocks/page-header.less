@@ -17,8 +17,13 @@
 .page-header__title-wrapper {
   background: url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 0;
 
-  @media (min-width: 329px) {
+  @media @mobile {
     background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-size: auto 510px;
+  }
+
+  @media @tablet {
+    background-size: auto;
   }
 
   @media @desktop {
