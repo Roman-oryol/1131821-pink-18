@@ -29,6 +29,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  @media @desktop {
+    justify-content: flex-start;
+  }
 }
 
 .images__item {
@@ -43,7 +47,12 @@
   }
 
   @media @desktop {
+    margin-right: 20px;
     margin-bottom: 54px;
+  }
+
+  &:nth-child(3n+1) {
+    margin-right: 0;
   }
 
   &--top {
