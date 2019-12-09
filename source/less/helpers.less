@@ -8,10 +8,16 @@
   margin-right: 20px;
   margin-left: 20px;
 
-  @media (min-width: 960px) {
+  @media @desktop {
     width: 940px;
     margin-right: auto;
     margin-left: auto;
+  }
+}
+
+.mobile-hidden {
+  @media @mobile-only {
+    display: none;
   }
 }
 
