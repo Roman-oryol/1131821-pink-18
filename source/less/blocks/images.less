@@ -41,12 +41,13 @@
   margin-bottom: 20px;
 
   @media @tablet {
-    width: 300px;
+    width: 48.39%;
     display: flex;
     flex-direction: column;
   }
 
   @media @desktop {
+    width: 300px;
     margin-right: 20px;
     margin-bottom: 54px;
   }
@@ -67,17 +68,22 @@
   }
 }
 
-.images__to-full--top {
+.images__to-full {
   display: block;
-  width: 320px;
-  margin-left: -20px;
 
-  @media @tablet {
-    height: 509px; /*временно для сетки*/
-  }
+  &--top {
+    margin-right: -20px;
+    margin-left: -20px;
 
-  @media @desktop {
-    height: 506px; /*временно для сетки*/
+    @media @tablet {
+      margin-right: -40px;
+      margin-left: -40px;
+    }
+
+    @media @desktop {
+      margin-right: -130px;
+      margin-left: -130px;
+    }
   }
 }
 
@@ -107,16 +113,7 @@
 
 .images__img {
   display: block;
-
-  @media @tablet {
-    width: 300px;
-    height: 300px;
-  }
-
-  @media @desktop {
-    width: 300px;
-    height: 400px;
-  }
+  width: 100%;
 }
 
 .images__description {
