@@ -12,7 +12,7 @@
       <nav class="page-header__nav main-nav main-nav--opened">
         <div class="main-nav__inner">
           <a class="main-nav__logo">
-            <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта Пинк">
+            <img src="img/logo-pink-white-mobile.svg" width="75" height="23" alt="Логотип сайта Пинк">
           </a>
           <button class="main-nav__toggle hidden" type="button"><span class="visually-hidden">Переключение видимости меню</span></button>
           <ul class="main-nav__list">
@@ -70,6 +70,88 @@
               <a class="article__more" href="#nowhere">Узнать больше об исследовании</a>
             </div>
           </div>
+        </section>
+        <section class="reviews container">
+          <h2 class="reviews__title visually-hidden">Отзывы о приложении</h2>
+          <ul class="reviews__list">
+            <li class="reviews__item">
+              <blockquote class="reviews__quote">
+                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                <cite class="reviews__autor-name">Николай Петров</cite>
+                <p class="reviews__about-autor ">25 лет, водитель трамвая</p>
+              </blockquote>
+            </li>
+          </ul>
+          <button class="reviews__control reviews__control--prev" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
+          <button class="reviews__control reviews__control--next" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
+          <div class="reviews__controls">
+              <button class="reviews__toggle reviews__togle--active" type="button"><span class="visually-hidden">1</span></button>
+              <button class="reviews__toggle" type="button"><span class="visually-hidden">2</span></button>
+              <button class="reviews__toggle" type="button"><span class="visually-hidden">3</span></button>
+          </div>
+        </section>
+        <section class="price">
+          <h2 class="visually-hidden">Стоимость приложения</h2>
+          <table class="price__list container">
+            <tr class="price__tariff">
+              <th></th>
+              <th class="price__tariff-item"><b>База</b> <span class="price__tariff-price">1,99 USD</span></th>
+              <th class="price__tariff-item price__tariff-item--top"><b>Стандарт</b> <span class="price__tariff-price">3,99 USD</span></th>
+              <th class="price__tariff-item"><b>Анлим</b> <span class="price__tariff-price">9,99 USD</span></th>
+            </tr>
+            <tr class="price__kits">
+              <td class="price__kit-item">Розовый фильтр</td>
+              <td class="price__kit-item">
+                <svg fill="#3dc644" width="31" height="21"><use xlink:href="img/sprite.svg#icon-yes"></use></svg>
+              </td>
+              <td class="price__kit-item">
+                  <svg fill="#3dc644" width="31" height="21"><use xlink:href="img/sprite.svg#icon-yes"></use></svg>
+              </td>
+              <td class="price__kit-item">
+                  <svg fill="#3dc644" width="31" height="21"><use xlink:href="img/sprite.svg#icon-yes"></use></svg>
+              </td>
+            </tr>
+            <tr class="price__kits">
+              <td class="price__kit-item">Смайлики</td>
+              <td class="price__kit-item">
+                <svg fill="#f25b26" width="27" height="26"><use xlink:href="img/sprite.svg#icon-no"></use></svg>
+              </td>
+              <td class="price__kit-item">
+                  <svg fill="#3dc644" width="31" height="21"><use xlink:href="img/sprite.svg#icon-yes"></use></svg>
+              </td>
+              <td class="price__kit-item">
+                  <svg fill="#3dc644" width="31" height="21"><use xlink:href="img/sprite.svg#icon-yes"></use></svg>
+              </td>
+            </tr>
+            <tr class="price__kits">
+              <td class="price__kit-item">Комментарии</td>
+              <td class="price__kit-item">
+                  <svg fill="#f25b26" width="27" height="26"><use xlink:href="img/sprite.svg#icon-no"></use></svg>
+              </td>
+              <td class="price__kit-item">
+                  <svg fill="#f25b26" width="27" height="26"><use xlink:href="img/sprite.svg#icon-no"></use></svg>
+              </td>
+              <td class="price__kit-item">
+                  <svg fill="#3dc644" width="31" height="21"><use xlink:href="img/sprite.svg#icon-yes"></use></svg>
+              </td>
+            </tr>
+          </table>
+        </section>
+        <section class="contacts container">
+          <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
+          <p class="contacts__item">
+            <span class="contacts__item-text">Звоните:</span>
+            <a class="contacts__phone" href="tel:+78125556666">тел. +7 (812) 555-66-66</a>
+          </p>
+          <p class="contacts__item">
+            <span class="contacts__item-text">Приезжайте в гости:</span>
+            <span class="contacts__address">ул. Большая Конюшенная, 19/8</span>
+          </p>
+          <p class="contacts__item">
+            <span class="contacts__item-text">Пишите:</span>
+            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123647!2d30.32089461561842!3d59.938796869048474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1571040332590!5m2!1sru!2sua" width="320" height="200" style="border:0;" allowfullscreen=""></iframe>
         </section>
     </main>
 
