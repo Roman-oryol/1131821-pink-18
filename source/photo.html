@@ -155,6 +155,31 @@
           </li>
         </ul>
       </section>
+      <section class="posting container">
+        <h2 class="posting__title visually-hidden">Загрузка фотографий</h2>
+        <p class="posting__invitation">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+        <form class="posting__photo-processing" action="https://echo.htmlacademy.ru">
+          <p class="posting__image">
+            <img class="posting__photo" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Фотография заснеженной дороги">
+          </p>
+          <ul class="posting__settings">
+            <li class="posting__settings-item posting__settings-item--crop">
+              <div class="posting__setting-range"></div>
+              <button class="posting__setting-toggle posting__setting-toggle--crop" type="button"><span class="visually-hidden">Регулятор</span></button>
+            </li>
+            <li class="posting__settings-item posting__settings-item--fill">
+              <div class="posting__setting-range"></div>
+              <button class="posting__setting-toggle posting__setting-toggle--fill" type="button"><span class="visually-hidden">Регулятор</span></button>
+            </li>
+            <li class="posting__settings-item posting__settings-item--contrast">
+              <div class="posting__setting-range"></div>
+              <button class="posting__range-toggle" type="button"><span class="visually-hidden">Регулятор</span></button>
+            </li>
+          </ul>
+          <button class="posting__btn posting__btn--submit">Запостить</button>
+          <button class="posting__btn posting__btn--reset" type="reset">Отмена</button>
+        </form>
+      </section>
     </main>
 
     <footer class="page-footer page-footer--footer container">
