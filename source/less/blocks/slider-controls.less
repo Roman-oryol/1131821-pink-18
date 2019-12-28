@@ -1,0 +1,43 @@
+.slider-controls {
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  width: 140px;
+}
+
+.slider-controls__toggle {
+  width: 12px;
+  height: 12px;
+  margin-right: 6.5px;
+  margin-left: 6.5px;
+  padding: 0;
+
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  background-color: #283645;
+
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 0.6;
+
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+
+  &--active {
+    border-color: #283645;
+    background-color: #ffffff;
+
+    opacity: 1;
+
+    &:hover,
+    &:active {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.rectangle-button {
+  box-sizing: border-box;
+  padding: 16px 20px 17px;
+
+  font: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+
+  border: none;
+  border-radius: 3px;
+  background-color: #2aab6d;
+
+  &:hover:not(:disabled),
+  &:focus {
+    background-color: #1c9b5e;
+  }
+
+  &:active:not(:disabled) {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+}
