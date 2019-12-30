@@ -1,0 +1,66 @@
+.rounded-button {
+  padding: 15px 10px 16px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+
+  border-width: 3px;
+  border-style: solid;
+  background-color: transparent;
+
+  @media @desktop {
+    font-size: 21px;
+  }
+
+  &--theme-white {
+    border-color: #ffffff;
+    border-radius: 40px;
+
+    &:hover {
+      color: #d22856;
+
+      background-color: #ffffff;
+      box-shadow: 0 5px 7px 0 rgba(1, 1, 1, 0.75);
+    }
+
+    &:active {
+      color: rgba(210, 40, 86, 0.3);
+
+      box-shadow: none;
+    }
+  }
+
+  &--theme-red {
+    color: #d22856;
+
+    border-color: #d22856;
+
+    &:hover {
+      color: #ffffff;
+
+      background-color: #d22856;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &--theme-gray {
+    color: #283645;
+    opacity: 0.1;
+
+    border-color: #283645;
+
+    &:hover {
+      opacity: 0.3;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+      background-color: #283645;
+    }
+  }
+}

@@ -1,0 +1,602 @@
+.contest {
+  line-height: 30px;
+}
+
+.contest__intro {
+  margin: 0 0 33px;
+  padding-top: 5px;
+
+  text-align: center;
+
+  @media @tablet {
+    margin-bottom: 71px;
+    padding: 42px 60px 0;
+
+    font-size: 18px;
+  }
+
+  @media @desktop {
+    box-sizing: border-box;
+    padding: 24px 70px 0;
+  }
+}
+
+.contest__fieldset-wrap {
+  @media @tablet {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media @desktop {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.contest__fieldset-legend {
+  padding: 0;
+
+  line-height: 18px;
+  color: #d22856;
+  text-align: center;
+
+  text-transform: uppercase;
+
+  @media @tablet {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.contest__participant {
+  margin: 0 0 26px;
+  padding: 0;
+
+  border: none;
+
+  @media @tablet {
+    order: -4;
+
+    margin-bottom: 6px;
+  }
+
+  @media @desktop {
+    width: 435px;
+  }
+
+  @media @desktop {
+    padding-top: 13px;
+  }
+}
+
+.contest__participant-item {
+  margin: 0 0 16px;
+
+  @media @tablet {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 52px;
+  }
+}
+
+.contest__text-label {
+  display: block;
+  margin-bottom: 6px;
+  margin-left: 22px;
+
+  color: #d22856;
+  text-transform: uppercase;
+
+  &--participant {
+    @media @tablet {
+      margin-right: 19px;
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &--contacts {
+    @media @tablet {
+      margin-top: 10px;
+      margin-left: 19px;
+    }
+  }
+}
+
+.contest__text-field {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 14px 20px 15px;
+
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 30px;
+
+  border: 2px solid #e5e5e5;
+
+  &:hover {
+    border-color: #283645;
+  }
+
+  &:active,
+  &:focus {
+    border-color: #d22856;
+  }
+}
+
+.contest__achievements {
+  margin: 0 -20px 31px;
+  padding: 0;
+
+  border: none;
+  background-color: #f2f2f2;
+
+  @media @tablet {
+    order: -1;
+
+    margin: 0;
+    margin-bottom: 57px;
+    padding-top: 0;
+
+    border: 2px solid #e5e5e5;
+    background-color: #ffffff;
+  }
+
+  @media @desktop {
+    width: 100%;
+    margin: 0 0 57px;
+    padding-bottom: 7px;
+  }
+}
+
+.contest__achievements-legend {
+  margin-bottom: 44px;
+  padding: 38px 50px 0;
+
+  background-color: #f2f2f2;
+
+  @media @tablet {
+    margin-bottom: 49px;
+    padding: 0 32px;
+
+    background-color: #ffffff;
+  }
+}
+
+.contest__achievements-group {
+  margin: 0 20px;
+  padding: 0 0 46px;
+
+  list-style: none;
+
+  @media @tablet {
+    margin-left: 58px;
+    padding-bottom: 52px;
+  }
+
+  @media @desktop {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-right: 0;
+    margin-left: 23px;
+    padding-bottom: 0;
+  }
+}
+
+.contest__achievement-option {
+  margin-bottom: 52px;
+  padding-left: 70px;
+
+  font-size: 18px;
+
+  @media @tablet {
+    padding-left: 60px;
+  }
+
+  @media @desktop {
+    width: 200px;
+    margin-left: 35px;
+
+    &--2 {
+      order: 1;
+      padding-left: 80px;
+    }
+
+    &--3 {
+      order: 2;
+    }
+
+    &--4 {
+      order: 3;
+    }
+
+    &--5 {
+      order: 4;
+      padding-left: 80px;
+    }
+
+    &--6 {
+      order: 5;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contest__achievement-label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -5px;
+    left: -70px;
+
+    width: 35px;
+    height: 35px;
+
+    border: 2px solid #e5e5e5;
+    background-color: #ffffff;
+
+    @media @tablet {
+      left: -60px;
+    }
+  }
+
+  &:hover {
+    &::before {
+      border-color: #283645;
+    }
+  }
+
+  &:active {
+    &::before {
+      border-color: #d22856;
+    }
+  }
+}
+
+.contest__achievement-input:focus + .contest__achievement-label {
+  &::before {
+    border-color: #283645;
+  }
+}
+
+.contest__achievement-input:checked + .contest__achievement-label {
+  &::before {
+    background: #ffffff url("../img/icon-checked.svg") no-repeat center;
+  }
+}
+
+.contest__contacts {
+  margin: 0;
+  padding: 0 0 26px;
+
+  border: none;
+
+  @media @tablet {
+    order: -2;
+    margin-bottom: 57px;
+    padding: 37px 58px 0;
+
+    border: 2px solid #e5e5e5;
+  }
+
+  @media @desktop {
+    width: 100%;
+    padding-top: 35px;
+    padding-bottom: 7px;
+  }
+}
+
+.contest__contacts-list {
+  @media @desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.contest__contacts-item {
+  margin: 0 0 16px;
+
+  @media @tablet {
+    position: relative;
+
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  @media @desktop {
+    width: 375px;
+  }
+
+  &::after {
+    @media @tablet {
+      content: "";
+
+      position: absolute;
+      top: 2px;
+      right: 2px;
+
+      width: 60px;
+      height: 59px;
+
+      background-color: #e5e5e5;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--tel {
+    @media @tablet {
+      margin-bottom: 23px;
+    }
+
+    @media @desktop {
+      margin-bottom: 0;
+    }
+
+    &::after {
+      background-image: url("../img/icon-phone.svg");
+    }
+  }
+
+  &--email {
+    @media @tablet {
+      margin-bottom: 20px;
+    }
+
+    @media @desktop {
+      margin-bottom: 0;
+    }
+
+    &::after {
+      background-image: url("../img/icon-mail.svg");
+    }
+  }
+}
+
+.contest__contacts-legend {
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
+.contest__applications-wrap {
+  margin: 0 -20px 37px;
+  padding-top: 37px;
+
+  background-color: #f2f2f2;
+
+  @media @tablet {
+    order: -3;
+
+    margin-bottom: 57px;
+    padding-top: 0;
+
+    background-color: #ffffff;
+  }
+
+  @media @desktop {
+    margin-left: auto;
+  }
+}
+
+.contest__applications {
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 0;
+
+  border: none;
+
+  @media @tablet {
+    border: 2px solid #e5e5e5;
+  }
+
+  @media @desktop {
+    width: 431px;
+  }
+}
+
+.contest__applications-legend {
+  margin-bottom: 40px;
+
+  @media @tablet {
+    margin-bottom: 48px;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+.contest__application-group {
+  margin: 0;
+  padding: 0 0 47px;
+
+  list-style: none;
+
+  @media @tablet {
+    padding-bottom: 59px;
+  }
+}
+
+.contest__application-option {
+  margin-bottom: 45px;
+  padding-left: 70px;
+
+  font-size: 18px;
+
+  @media @tablet {
+    margin-left: 58px;
+    padding-left: 60px;
+  }
+
+  @media @desktop {
+    margin-left: 74px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contest__application-label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -4px;
+    left: -70px;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+    border: 2px solid #e5e5e5;
+
+    @media @tablet {
+      left: -60px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 8px;
+    left: -58px;
+
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+    background-color: #d22856;
+
+    @media @tablet {
+      left: -48px;
+    }
+  }
+
+  &:hover {
+    &::before {
+      border-color: #283645;
+    }
+  }
+
+  &:active {
+    &::before {
+      border-color: #d22856;
+    }
+  }
+}
+
+.contest__application-input:checked + .contest__application-label {
+  &::after {
+    content: "";
+  }
+}
+
+.contest__application-input:focus + .contest__application-label {
+  &::before {
+    border-color: #283645;
+  }
+}
+
+.contest__emotions {
+  margin: 0 0 43px;
+  padding: 0;
+
+  border: none;
+
+  @media @tablet {
+    margin-bottom: 67px;
+    padding: 20px 58px 45px;
+
+    border: 2px solid #e5e5e5;
+  }
+
+  @media @desktop {
+    width: 100%;
+    margin-bottom: 65px;
+    padding-top: 17px;
+    padding-bottom: 37px;
+  }
+}
+
+.contest__emotions-legend {
+  margin: 0 auto 17px;
+
+  @media @tablet {
+    padding: 0 38px;
+  }
+}
+
+.contest__emotions-description {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 200px;
+  margin: 0;
+  padding: 15px 20px;
+
+  font: inherit;
+  font-size: 18px;
+
+  border: 2px solid #e5e5e5;
+
+  resize: none;
+
+  @media @tablet {
+    min-height: 193px;
+  }
+
+  @media @desktop {
+    min-height: 128px;
+  }
+}
+
+.contest__form-button-wrap {
+  @media @tablet {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 30px;
+  }
+
+  @media @desktop {
+    margin-bottom: 0;
+  }
+}
+
+.contest__form-button {
+  width: 100%;
+  margin-bottom: 21px;
+
+  @media @tablet {
+    width: 300px;
+  }
+}
+
+.contest__footnote {
+  text-transform: uppercase;
+  text-align: center;
+
+  @media @tablet {
+    margin-left: auto;
+  }
+}
+
+.contest__note {
+  color: #d22856;
+}

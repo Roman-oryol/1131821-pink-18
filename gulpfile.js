@@ -7,6 +7,18 @@ var less = require("gulp-less");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
+var concat = require("gulp-concat");
+
+gulp.task("js", function() {
+  return gulp
+    .src([
+      "node_modules/picturefill/dist/picturefill.js",
+      "node_modules/svg4everybody/dist/svg4everybody.js",
+      "source/js/**/*.js"
+    ])
+    .pipe(concat("script.js"))
+    .pipe(gulp.dest("source/js"))
+});
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")

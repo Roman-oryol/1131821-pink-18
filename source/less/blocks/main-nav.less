@@ -89,6 +89,8 @@
   display: block;
   height: 22px;
   padding: 22px 20px 22px;
+
+  color: #ffffff;
   box-shadow: none;
 
   @media @tablet {
@@ -102,6 +104,22 @@
     margin-right: 171px;
     margin-bottom: 0;
     padding: 0;
+  }
+
+  &:hover[href] {
+    color: #d22856;
+  }
+
+  &:active[href] {
+    color: inherit;
+    opacity: 0.3;
+  }
+}
+
+.main-nav__logo-img {
+  @media @tablet {
+    width: 146px;
+    height: 40px;
   }
 }
 
@@ -190,6 +208,7 @@
 
   background-color: transparent;
   border: none;
+  outline: none;
   cursor: pointer;
 
   @media @tablet {

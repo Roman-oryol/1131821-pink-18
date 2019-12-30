@@ -8,25 +8,18 @@
   @media @tablet {
     flex-direction: row;
     align-items: flex-start;
-    padding-top: 46px;
-  }
-}
-
-.page-footer__logo-img {
-  display: block;
-
-  &:hover {
-    fill: #d22856;
+    padding-top: 35px;
   }
 
-  &:active {
-    fill: inherit;
-    opacity: 0.3;
+  @media @desktop {
+    padding-top: 50px;
   }
 }
 
 .page-footer__logo {
-  margin-bottom: 40px;
+  margin-bottom: 33px;
+
+  color: #283645;
 
   @media @tablet {
     margin-right: 67px;
@@ -34,7 +27,16 @@
   }
 
   @media @desktop {
-    margin-right: 228px;
+    margin-right: 230px;
+  }
+
+  &:hover[href] {
+    color: #d22856;
+  }
+
+  &:active[href] {
+    color: inherit;
+    opacity: 0.3;
   }
 }
 
@@ -55,11 +57,11 @@
   @media @tablet {
     align-self: center;
     margin-left: auto;
-    padding-top: 5px;
+    padding-top: 7px;
   }
 
   @media @desktop {
-    padding-top: 5px;
+    padding-top: 3px;
   }
 }
 
