@@ -13,8 +13,10 @@
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "8.0.x",
     "gulp-sourcemaps": "2.6.x",
+    "picturefill": "^3.0.3",
     "stylelint": "10.1.x",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint-config-htmlacademy": "0.1.x",
+    "svg4everybody": "^2.1.9"
   },
   "scripts": {
     "js": "gulp js",
@@ -40,7 +42,5 @@
   "engines": {
     "node": "8.16"
   },
-  "dependencies": {
-    "picturefill": "^3.0.3"
-  }
+  "dependencies": {}
 }

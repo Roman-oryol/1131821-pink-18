@@ -13,10 +13,11 @@ gulp.task("js", function() {
   return gulp
     .src([
       "node_modules/picturefill/dist/picturefill.js",
-      "src/js/**/*.js"
+      "node_modules/svg4everybody/dist/svg4everybody.js",
+      "source/js/**/*.js"
     ])
     .pipe(concat("script.js"))
-    .pipe(gulp.dest("src/js"))
+    .pipe(gulp.dest("source/js"))
 });
 
 gulp.task("css", function () {

@@ -125,54 +125,47 @@
   }
 }
 
-.contest__achievements-wrap {
+.contest__achievements {
   margin: 0 -20px 31px;
-  padding-top: 37px;
+  padding: 0;
 
+  border: none;
   background-color: #f2f2f2;
 
   @media @tablet {
     order: -1;
 
+    margin: 0;
     margin-bottom: 57px;
     padding-top: 0;
 
+    border: 2px solid #e5e5e5;
     background-color: #ffffff;
   }
 
   @media @desktop {
     width: 100%;
-    margin: 0;
-  }
-}
-
-.contest__achievements {
-  margin: 0 20px;
-  padding: 0;
-
-  border: none;
-
-  @media @tablet {
-    border: 2px solid #e5e5e5;
-  }
-
-  @media @desktop {
     margin: 0 0 57px;
     padding-bottom: 7px;
   }
 }
 
 .contest__achievements-legend {
-  margin-bottom: 45px;
-  padding: 0 30px;
+  margin-bottom: 44px;
+  padding: 38px 50px 0;
+
+  background-color: #f2f2f2;
 
   @media @tablet {
     margin-bottom: 49px;
+    padding: 0 32px;
+
+    background-color: #ffffff;
   }
 }
 
 .contest__achievements-group {
-  margin: 0;
+  margin: 0 20px;
   padding: 0 0 46px;
 
   list-style: none;
@@ -186,6 +179,7 @@
     display: flex;
     flex-wrap: wrap;
 
+    margin-right: 0;
     margin-left: 23px;
     padding-bottom: 0;
   }
@@ -205,25 +199,25 @@
     width: 200px;
     margin-left: 35px;
 
-    &--second {
+    &--2 {
       order: 1;
       padding-left: 80px;
     }
 
-    &--third {
+    &--3 {
       order: 2;
     }
 
-    &--fourth {
+    &--4 {
       order: 3;
     }
 
-    &--fifth {
+    &--5 {
       order: 4;
       padding-left: 80px;
     }
 
-    &--sixth {
+    &--6 {
       order: 5;
     }
   }
@@ -252,6 +246,7 @@
     height: 35px;
 
     border: 2px solid #e5e5e5;
+    background-color: #ffffff;
 
     @media @tablet {
       left: -60px;
@@ -279,7 +274,7 @@
 
 .contest__achievement-input:checked + .contest__achievement-label {
   &::before {
-    background: url("../img/icon-checked.svg") no-repeat center;
+    background: #ffffff url("../img/icon-checked.svg") no-repeat center;
   }
 }
 
@@ -479,6 +474,22 @@
     }
   }
 
+  &::after {
+    position: absolute;
+    top: 8px;
+    left: -58px;
+
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+    background-color: #d22856;
+
+    @media @tablet {
+      left: -48px;
+    }
+  }
+
   &:hover {
     &::before {
       border-color: #283645;
@@ -495,20 +506,6 @@
 .contest__application-input:checked + .contest__application-label {
   &::after {
     content: "";
-
-    position: absolute;
-    top: 8px;
-    left: -58px;
-
-    width: 15px;
-    height: 15px;
-
-    border-radius: 50%;
-    background-color: #d22856;
-
-    @media @tablet {
-      left: -48px;
-    }
   }
 }
 
