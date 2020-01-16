@@ -23,7 +23,7 @@ gulp.task("css", function () {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(less())
-    // .pipe(gcmq())
+    .pipe(gcmq())
     .pipe(postcss([
       autoprefixer()
     ]))
