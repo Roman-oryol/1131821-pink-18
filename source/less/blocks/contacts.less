@@ -1,5 +1,7 @@
 .contacts {
   text-align: center;
+
+  overflow-x: hidden;
 }
 
 .contacts__list {
@@ -11,14 +13,14 @@
 }
 
 .contacts__list-wrap {
-  margin-bottom: -33px;
+  margin-bottom: -35px;
 
   @media @tablet {
     margin-bottom: -68px;
   }
 
   @media @desktop {
-    margin-bottom: -101px;
+    margin-bottom: -102px;
   }
 
   &::after {
@@ -29,27 +31,26 @@
 
     display: block;
     height: 35px;
-    margin-right: -20px;
-    margin-left: -20px;
 
     background: url("../img/bg-triangle-white-footer.svg") no-repeat;
     background-size: 100% 35px;
 
     @media @tablet {
-      height: 70px;
+      height: 68px;
 
-      background-size: 100% 70px;
+      background-size: 100% 68px;
     }
 
     @media @desktop {
-      height: 105px;
+      height: 103px;
 
-      background-size: 100% 86px;
+      background-size: 100% 81px;
     }
   }
 }
 
 .contacts__title {
+  margin-top: 0;
   margin-bottom: 29px;
 
   font-weight: 300;
@@ -93,16 +94,16 @@
   }
 
   &--address {
-    margin-bottom: 35px;
+    margin-bottom: 38px;
 
     @media @tablet {
       width: 100%;
-      margin-bottom: 26px;
+      margin-bottom: 29px;
     }
 
     @media @desktop {
       width: 300px;
-      margin-bottom: 36px;
+      margin-bottom: 40px;
     }
   }
 }
@@ -198,6 +199,7 @@
 .contacts__map-iframe {
   position: relative;
 
+  display: block;
   width: 100%;
 
   @media @tablet {

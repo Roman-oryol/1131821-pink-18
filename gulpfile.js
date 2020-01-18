@@ -14,12 +14,16 @@ var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var concat = require("gulp-concat");
+var uglify = require("gulp-uglify");
+var htmlmin = require("gulp-htmlmin");
+var gcmq = require("gulp-group-css-media-queries");
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(less())
+    .pipe(gcmq())
     .pipe(postcss([
       autoprefixer()
     ]))
@@ -39,7 +43,10 @@ gulp.task("sprite", function () {
 });
 
 gulp.task("html", function () {
-  return gulp.src("source/*.html")
+  return gulp.src("source/**/*.html")
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
     .pipe(gulp.dest("build"));
 });
 
@@ -50,11 +57,7 @@ gulp.task("images", function () {
       imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("build/img"));
-});
-
-gulp.task("webp", function () {
-  return gulp.src("source/img/**/*.{png,jpg}")
+    .pipe(gulp.dest("build/img"))
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 });
@@ -80,18 +83,20 @@ gulp.task("js", function () {
       "source/js/**/*.js"
     ])
     .pipe(concat("script.js"))
+    .pipe(uglify())
+    .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"))
 });
 
 gulp.task("build", gulp.series(
   "clean",
-  "copy",
-  "images",
-  "webp",
-  "js",
-  "css",
-  "sprite",
-  "html"
+  gulp.parallel(
+    "copy",
+    "images",
+    "js",
+    "css",
+    "sprite",
+    "html")
 ));
 
 gulp.task("server", function () {
@@ -105,7 +110,8 @@ gulp.task("server", function () {
 
   gulp.watch("source/less/**/*.less", gulp.series("css", "refresh"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "refresh"));
-  gulp.watch("source/*.html", gulp.series("html", "refresh"));
+  gulp.watch("source/js/**/*.js", gulp.series("js", "refresh"));
+  gulp.watch("source/**/*.html", gulp.series("html", "refresh"));
 });
 
 gulp.task("refresh", function (done) {
