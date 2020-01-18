@@ -5,11 +5,13 @@
   background-repeat: no-repeat;
   background-position: 0 175px, 50% 0;
 
-  @media @retina {
-    background-image:
-      url("../img/iphone-hand-mobile@2x.png"),
-      url("../img/bg-back-mobile@2x.jpg");
-    background-size: 258px auto, 320px auto;
+  @media @mobile {
+    @media @retina {
+      background-image:
+        url("../img/iphone-hand-mobile@2x.png"),
+        url("../img/bg-back-mobile@2x.jpg");
+      background-size: 258px auto, 320px auto;
+    }
   }
 
   @media @mobile-wo-min {
@@ -23,7 +25,7 @@
       background-image:
         url("../img/iphone-hand-mobile@2x.png"),
         url("../img/bg-back-tablet@2x.jpg");
-      background-size: 258px, auto 461px;
+      background-size: 258px auto, auto 461px;
     }
   }
 

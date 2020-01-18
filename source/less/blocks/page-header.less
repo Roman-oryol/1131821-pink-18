@@ -19,9 +19,11 @@
   background-repeat: no-repeat;
   background-position: center 0;
 
-  @media @retina {
-    background-image: url("../img/bg-back-mobile@2x.jpg");
-    background-size: 320px;
+  @media @mobile {
+    @media @retina {
+      background-image: url("../img/bg-back-mobile@2x.jpg");
+      background-size: 320px;
+    }
   }
 
   @media @mobile-wo-min {
